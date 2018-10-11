@@ -104,6 +104,32 @@ public class Colosseum {
         Pokemon returnPokemon = null;
         return returnPokemon;
     }
+    public static Pokemon buildPokemon() {
+        Pokemon tempPokemon = new Pokemon();
+        return tempPokemon;
+
+        System.out.println("Name your Pokemon");
+        String pokename = myScan.next();
+
+        System.out.println("How many hit points will it have? (1-50)");
+        String pointHits = myScan.next();
+        while (pointHits > MAX_HIT_POINTS || pointHits < 1) {
+            System.out.println("Try again");
+        }
+
+        System.out.println("What do you want your attack level to be? (1-49)");
+        String levelAttack = myScan.next();
+        while (levelAttack > MAX_HIT_POINTS || levelAttack < 1) {
+            System.out.print("Try Again");
+        }
+
+        System.out.println("What do you want your defense level to be? (1-23)");
+        String levelDefense = myScan.next();
+        while (levelDefense > DEFENSE_LEVEL || levelDefense < 1) {
+            System.out.println("Try Again");
+        }
+        Pokemon character = new Pokemon(pokename, pointHits, levelAttack, levelDefense)
+    }
 
     /**
      * Prints who is ahead.

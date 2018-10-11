@@ -28,6 +28,7 @@ public class WaterPokemon extends Pokemon {
         specialtyAttack = "HYDRO CANNON";
         specialtyProbability = specProb;
     }
+
     /**
      * We have to modify our attack slightly to account for our new specialty attacks.
      * We will first have a normal attack that we're used to with our normal Pokemon.
